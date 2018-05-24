@@ -7,8 +7,8 @@ class Academic_calendar extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model('Academic_calendar');
-		$data['academic_calendar'] = $this->Academic_calendar->showAcademicCalendar();
+		$this->load->model('Academic_calendar_model');
+		$data['academic_calendar'] = $this->Academic_calendar_model->showAcademicCalendar();
 		$this->load->view('partials/_header');
 		$this->load->view('partials/_topbar');
 		$this->load->view('partials/_sidebar');
