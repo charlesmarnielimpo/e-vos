@@ -3,12 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Academic_calendar extends CI_Controller {
 
-
+	public function __construct() {
+		parent::__construct();
+		$this->load->model('Academic_calendar_model');
+	}
 
 	public function index()
 	{
-		$this->load->model('Academic_calendar_model');
-		$data['academic_calendar'] = $this->Academic_calendar_model->showAcademicCalendar();
+		$data['academic_calendar'] = $this->Academic_calendar_model->read();
 		$this->load->view('partials/_header');
 		$this->load->view('partials/_topbar');
 		$this->load->view('partials/_sidebar');
@@ -17,19 +19,18 @@ class Academic_calendar extends CI_Controller {
 		$this->load->view('partials/_scripts');
 	}
 
-	public function addAcademicCalendar()
-	{ 
+	public function create()
+	{
 		$now = date('Y-m-d H:i:s');
-        $data = array(  
-                'name'     	 => $this->input->post('txt-add-academic-calendar-name'),  
-                'start_year' => $this->input->post('txt-add-academic-calendar-start-year'),  
-                'end_year'   => $this->input->post('txt-add-academic-calendar-end-year'),
-                'start_date' => date( 'Y-m-d', strtotime( $this->input->post('txt-add-academic-calendar-start-date') ) ), 
-                'end_date'   => date( 'Y-m-d', strtotime( $this->input->post('txt-add-academic-calendar-end-date') ) ),
-                'created_at' => $now
-                );   
-        $this->db->insert('academic_calendar',$data);  
-  
-        redirect("/academic_calendar");  
+        $data = array(
+			'name'     	 => $this->input->post('txt-add-academic-calendar-name'),
+			'start_year' => $this->input->post('txt-add-academic-calendar-start-year'),
+			'end_year'   => $this->input->post('txt-add-academic-calendar-end-year'),
+			'start_date' => date( 'Y-m-d', strtotime( $this->input->post('txt-add-academic-calendar-start-date') ) ),
+			'end_date'   => date( 'Y-m-d', strtotime( $this->input->post('txt-add-academic-calendar-end-date') ) ),
+			'created_at' => $now
+			);
+        $this->db->insert('academic_calendar', $data);
+        redirect("/academic_calendar");
 	}
 }

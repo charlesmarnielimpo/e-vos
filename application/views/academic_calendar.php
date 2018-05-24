@@ -24,7 +24,7 @@
                             <button class="pull-right btn btn-info m-b-30" type="button" data-toggle="modal" data-target="#modal-add-academic-calendar">Add Academic Calendar</button>
                             <div class="clearfix"></div>
                             <div class="table-responsive">
-                                <table id="academic_calendar_tbl" class="table display">
+                                <table id="academic_calendar_tbl" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -69,7 +69,7 @@
                             <h4 class="modal-title" id="exampleModalLabel1">Add Academic Calendar</h4>
                         </div>
                         <div class="modal-body">
-                            <form class="row" method="post" action="<?php echo site_url('academic_calendar/addAcademicCalendar'); ?>">  
+                            <form class="row" method="post" action="<?php echo site_url('academic_calendar/create'); ?>">
                                 <div class="form-group col-sm-12">
                                     <label for="txt-add-academic-calendar-name" class="control-label">Name:</label>
                                     <input type="text" class="form-control" name="txt-add-academic-calendar-name" placeholder="e.g. A.Y. 2017-2018">
