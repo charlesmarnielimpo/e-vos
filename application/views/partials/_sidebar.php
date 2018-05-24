@@ -9,7 +9,7 @@
                 <div class="user-profile">
                     <div class="dropdown user-pro-body">
                         <div>
-                            <img src="plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
+                            <img src=<?= base_url("plugins/images/users/varun.jpg"); ?> alt="user-img" class="img-circle">
                         </div>
                         <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Steave Gection
                         </a>
@@ -20,7 +20,7 @@
                         <a href=<?= base_url(""); ?> class="waves-effect"><i class="mdi mdi-view-dashboard fa-fw"></i> <span class="hide-menu">Dashboard</span></a>
                     </li>
                     <li>
-                        <a href="academicyear.html" class="waves-effect"><i class="mdi mdi-school fa-fw"></i> <span class="hide-menu">Academic Year</span></a>
+                        <a href=<?= base_url("/academic_calendar"); ?> class="waves-effect"><i class="mdi mdi-school fa-fw"></i> <span class="hide-menu">Academic Year</span></a>
                     </li>
                     <li>
                         <a href="result.html" class="waves-effect"><i class="mdi mdi-chart-bar fa-fw"></i> <span class="hide-menu">Result</span></a>

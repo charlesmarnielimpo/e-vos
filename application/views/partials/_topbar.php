@@ -44,7 +44,7 @@
                             </li> -->
                     <li class="dropdown">
                         <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#">
-                            <img src="plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle">
+                            <img src=<?= base_url("plugins/images/users/varun.jpg"); ?> alt="user-img" width="36" class="img-circle">
                             <b class="hidden-xs">Steave</b>
                             <span class="caret"></span>
                         </a>
@@ -52,7 +52,7 @@
                             <li>
                                 <div class="dw-user-box">
                                     <div class="u-img">
-                                        <img src="plugins/images/users/varun.jpg" alt="user" />
+                                        <img src=<?= base_url("plugins/images/users/varun.jpg"); ?> alt="user" />
                                     </div>
                                     <div class="u-text">
                                         <h4>Steave Jobs</h4>

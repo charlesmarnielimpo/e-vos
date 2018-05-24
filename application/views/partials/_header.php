@@ -23,6 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?= link_tag("plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css"); ?>
     <!-- Calendar CSS -->
     <?= link_tag("plugins/bower_components/calendar/dist/fullcalendar.css"); ?>
+	<!-- Date picker plugins css -->
+    <?= link_tag("plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.css"); ?>
     <!-- animation CSS -->
     <?= link_tag("assets/css/animate.css"); ?>
     <!-- Custom CSS -->

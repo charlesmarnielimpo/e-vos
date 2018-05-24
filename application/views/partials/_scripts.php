@@ -18,6 +18,8 @@
     <script src=<?= base_url("plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"); ?>></script>
     <!-- Sparkline chart JavaScript -->
     <script src=<?= base_url("plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"); ?>></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src=<?= base_url("plugins/bower_components/bootstrap-datepicker/bootstrap-datepicker.min.js"); ?>></script>
     <!-- Custom Theme JavaScript -->
     <script src=<?= base_url("assets/js/custom.min.js"); ?>></script>
     <script src=<?= base_url("assets/js/dashboard1.js"); ?>></script>
@@ -27,6 +29,8 @@
     <!--DataTables JavaScript -->
     <script src=<?= base_url("plugins/bower_components/datatables/jquery.dataTables.min.js"); ?>></script>
     <script src=<?= base_url("assets/js/pages/positions.js"); ?>></script>
+	<!--Academic Calendar -->
+    <script src=<?= base_url("assets/js/pages/academic_calendar.js"); ?>></script>
 </body>
 
 </html>
