@@ -24,6 +24,9 @@
     <script src=<?= base_url("plugins/bower_components/toast-master/js/jquery.toast.js"); ?>></script>
     <!--Style Switcher -->
     <script src=<?= base_url("plugins/bower_components/styleswitcher/jQuery.style.switcher.js"); ?>></script>
+    <!--DataTables JavaScript -->
+    <script src=<?= base_url("plugins/bower_components/datatables/jquery.dataTables.min.js"); ?>></script>
+    <script src=<?= base_url("assets/js/pages/positions.js"); ?>></script>
 </body>
 
 </html>

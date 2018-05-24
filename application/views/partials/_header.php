@@ -29,6 +29,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?= link_tag("assets/css/style.css"); ?>
     <!-- color CSS -->
     <?= link_tag("assets/css/colors/default.css"); ?>
+    <!-- DataTables -->
+    <?= link_tag("plugins/bower_components/datatables/jquery.dataTables.min.css"); ?>
+    <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

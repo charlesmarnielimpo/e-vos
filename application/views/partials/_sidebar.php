@@ -16,8 +16,8 @@
                     </div>
                 </div>
                 <ul class="nav" id="side-menu">
-                    <li class="active">
-                        <a href="index.html" class="waves-effect active"><i class="mdi mdi-view-dashboard fa-fw"></i> <span class="hide-menu">Dashboard</span></a>
+                    <li>
+                        <a href=<?= base_url(""); ?> class="waves-effect"><i class="mdi mdi-view-dashboard fa-fw"></i> <span class="hide-menu">Dashboard</span></a>
                     </li>
                     <li>
                         <a href="academicyear.html" class="waves-effect"><i class="mdi mdi-school fa-fw"></i> <span class="hide-menu">Academic Year</span></a>
@@ -29,7 +29,7 @@
                         <a href="candidates.html" class="waves-effect"><i class="mdi mdi-walk fa-fw"></i> <span class="hide-menu">Candidates</span></a>
                     </li>
                     <li>
-                        <a href="positions.html" class="waves-effect"><i class="mdi mdi-seal fa-fw"></i> <span class="hide-menu">Positions</span></a>
+                        <a href=<?= base_url("/positions"); ?> class="waves-effect"><i class="mdi mdi-seal fa-fw"></i> <span class="hide-menu">Positions</span></a>
                     </li>
                     <li>
                         <a href="partylists.html" class="waves-effect"><i class="mdi mdi-tooltip-text fa-fw"></i> <span class="hide-menu">Partylists</span></a>

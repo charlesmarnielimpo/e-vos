@@ -216,7 +216,7 @@
                                             <td class="text-center">1</td>
                                             <td>President</td>
                                             <td>
-                                                <button class="btn btn-default btn-outline"><i class="mdi mdi-pencil fa-fw text-success"></i></button>
+                                                <button class="btn btn-default btn-outline" data-toggle="modal" data-target="#modal-edit-position"><i class="mdi mdi-pencil fa-fw text-success"></i></button>
                                                 <button class="btn btn-default btn-outline"><i class="mdi mdi-delete fa-fw text-danger"></i></button>
                                             </td>
                                         </tr>
@@ -290,6 +290,30 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modal-edit-position" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="exampleModalLabel1">Edit Position</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="txt-add-position" class="control-label">Name:</label>
+                                    <input type="text" class="form-control" name="txt-add-position" placeholder="e.g. President">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Edit</button>
                         </div>
                     </div>
                 </div>
