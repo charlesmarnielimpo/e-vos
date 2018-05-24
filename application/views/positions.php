@@ -24,7 +24,7 @@
                             <button class="pull-right btn btn-info m-b-30" type="button" data-toggle="modal" data-target="#modal-add-position">Add Position</button>
                             <div class="clearfix"></div>
                             <div class="table-responsive">
-                                <table id="positions_tbl" class="table display">
+                                <table id="positions_tbl" class="table table-striped">
                                     <thead>
                                         <tr>
                                             <th width="10%" class="text-center">#</th>
@@ -33,13 +33,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($position as $row) { ?>
+                                        <?php foreach ($positions as $position) { ?>
                                             <tr>
-                                                <td class="text-center"><?php echo $row->id; ?></td>
-                                                <td><?php echo $row->name; ?></td>
+                                                <td class="text-center">
+                                                    <?php echo $position->id; ?>
+                                                </td>
                                                 <td>
-                                                    <button class="btn btn-default btn-outline" data-toggle="modal" data-target="#modal-edit-position"><i class="mdi mdi-pencil fa-fw text-success"></i></button>
-                                                    <button class="btn btn-default btn-outline"><i class="mdi mdi-delete fa-fw text-danger"></i></button>
+                                                    <?php echo $position->name; ?>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-outline btn-default btn-sm" data-toggle="modal" data-target="#modal-edit-position"><i class="mdi mdi-pencil fa-fw text-success"></i></button>
+                                                    <button class="btn btn-outline btn-default btn-sm"><i class="mdi mdi-delete fa-fw text-danger"></i></button>
                                                 </td>
                                             </tr>
                                         <?php } ?>
@@ -96,14 +100,9 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success">Edit</button>
+                            <button type="button" class="btn btn-success">Update</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End Modal -->
-            <footer class="footer text-center"> 2018 &copy; All rights reserve. Onieros IT Solutions. </footer>
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Page Content -->
-        <!-- ============================================================== -->
