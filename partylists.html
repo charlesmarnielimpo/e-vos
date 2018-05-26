@@ -15,6 +15,10 @@
     <link href="plugins/bower_components/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- Menu CSS -->
     <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- Popup CSS -->
+    <link href="plugins/bower_components/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
+    <!-- summernotes CSS -->
+    <link href="plugins/bower_components/summernote/dist/summernote.css" rel="stylesheet" />
     <!-- toast CSS -->
     <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
     <!-- morris CSS -->
@@ -147,18 +151,14 @@
                     <li>
                         <a href="index.html" class="waves-effect"><i class="mdi mdi-view-dashboard fa-fw"></i> <span class="hide-menu">Dashboard</span></a>
                     </li>
-                    <li>
-                        <a href="academicyear.html" class="waves-effect"><i class="mdi mdi-school fa-fw"></i> <span class="hide-menu">Academic Year</span></a>
-                    </li>
+
                     <li>
                         <a href="result.html" class="waves-effect"><i class="mdi mdi-chart-bar fa-fw"></i> <span class="hide-menu">Result</span></a>
                     </li>
                     <li>
                         <a href="candidates.html" class="waves-effect"><i class="mdi mdi-walk fa-fw"></i> <span class="hide-menu">Candidates</span></a>
                     </li>
-                    <li>
-                        <a href="positions.html" class="waves-effect"><i class="mdi mdi-seal fa-fw"></i> <span class="hide-menu">Positions</span></a>
-                    </li>
+
                     <li class="active">
                         <a href="partylists.html" class="waves-effect active"><i class="mdi mdi-tooltip-text fa-fw"></i> <span class="hide-menu">Partylists</span></a>
                     </li>
@@ -170,6 +170,27 @@
                     </li>
                     <li>
                         <a href="reports.html" class="waves-effect"><i class="mdi mdi-reorder-horizontal fa-fw"></i> <span class="hide-menu">Reports</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <i class="mdi mdi-settings fa-fw"></i>
+                            <span class="hide-menu">Settings<span class="fa arrow"></span>
+                            </span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="positions.html" class="waves-effect">
+                                    <i class="mdi mdi-seal fa-fw"></i>
+                                    <span class="hide-menu">Positions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="academicyear.html" class="waves-effect">
+                                    <i class="mdi mdi-school fa-fw"></i>
+                                    <span class="hide-menu">Academic Year</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -202,38 +223,198 @@
                         <div class="white-box">
                             <button class="pull-right btn btn-info m-b-30" type="button" data-toggle="modal" data-target="#modal-add-partylist">Add Partylists</button>
                             <div class="clearfix"></div>
-                            <div class="table-responsive">
-                                <table id="myTable" class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th width="10%" class="text-center">#</th>
-                                            <th width="55%">Name</th>
-                                            <th width="20%">School Year</th>
-                                            <th width="15%">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">1</td>
-                                            <td>Senpai Party</td>
-                                            <td>2018-2019</td>
-                                            <td>
-                                                <button class="btn btn-default btn-outline"><i class="mdi mdi-pencil fa-fw text-success"></i></button>
-                                                <button class="btn btn-default btn-outline"><i class="mdi mdi-delete fa-fw text-danger"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">2</td>
-                                            <td>E-VoS Party</td>
-                                            <td>2018-2019</td>
-                                            <td>
-                                                <button class="btn btn-default btn-outline"><i class="mdi mdi-pencil fa-fw text-success"></i></button>
-                                                <button class="btn btn-default btn-outline"><i class="mdi mdi-delete fa-fw text-danger"></i></button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="sttabs tabs-style-linemove">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="#section-linemove-1">
+                                                <span>A.Y. 2017-2018</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-linemove-2">
+                                                <span>A.Y. 2018-2019</span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-linemove-3">
+                                                <span>A.Y. 2019-2020</span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-linemove-4">
+                                                <span>A.Y. 2020-2021</span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#section-linemove-5">
+                                                <span>A.Y. 2021-2022</span>
+
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="content-wrap">
+                                    <section id="section-linemove-1">
+                                        <div class="panel panel-danger">
+                                            <div class="panel-heading">Lorem Ipsum Party
+                                                <div class="panel-action">
+                                                    <a href="#" data-perform="panel-collapse">
+                                                        <i class="ti-minus"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-wrapper collapse in">
+                                                <div class="panel-body">
+                                                    <h3 class="m-b-0">Platform:</h3>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                                                    <ul>
+                                                        <ol>
+                                                            <li>test 1</li>
+                                                            <li>test 2</li>
+                                                            <li>test 3</li>
+                                                        </ol>
+                                                    </ul>
+                                                    <h3>Members:</h3>
+                                                    <div class="row el-element-overlay">
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <div class="white-box">
+                                                                <div class="el-card-item">
+                                                                    <div class="el-card-avatar el-overlay-1"> <img src="../plugins/images/users/1.jpg" />
+                                                                        <div class="el-overlay">
+                                                                            <ul class="el-info">
+                                                                                <li>
+                                                                                    <a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="el-card-content">
+                                                                        <h3 class="box-title">Genelia Deshmukh</h3>
+                                                                        <small>President</small>
+                                                                        <br/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.usercard-->
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <div class="white-box">
+                                                                <div class="el-card-item">
+                                                                    <div class="el-card-avatar el-overlay-1"> <img src="../plugins/images/users/2.jpg" />
+                                                                        <div class="el-overlay">
+                                                                            <ul class="el-info">
+                                                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
+                                                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="el-card-content">
+                                                                        <h3 class="box-title">John Doe</h3> <small>Vice President</small>
+                                                                        <br/> </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.usercard-->
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <div class="white-box">
+                                                                <div class="el-card-item">
+                                                                    <div class="el-card-avatar el-overlay-1"> <img src="../plugins/images/users/3.jpg" />
+                                                                        <div class="el-overlay">
+                                                                            <ul class="el-info">
+                                                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
+                                                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="el-card-content">
+                                                                        <h3 class="box-title">Jane Doe</h3>
+                                                                        <small>Secretary</small>
+                                                                        <br/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.usercard-->
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <div class="white-box">
+                                                                <div class="el-card-item">
+                                                                    <div class="el-card-avatar el-overlay-1"> <img src="../plugins/images/users/4.jpg" />
+                                                                        <div class="el-overlay">
+                                                                            <ul class="el-info">
+                                                                                <li><a class="btn default btn-outline image-popup-vertical-fit" href="../plugins/images/users/1.jpg"><i class="icon-magnifier"></i></a></li>
+                                                                                <li><a class="btn default btn-outline" href="javascript:void(0);"><i class="icon-link"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="el-card-content">
+                                                                        <h3 class="box-title">Charisse Malaluna</h3>
+                                                                        <small>Treasurer</small>
+                                                                        <br/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.usercard-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-danger">
+                                            <div class="panel-heading text-left">Mongoloids Party
+                                                <div class="panel-action">
+                                                    <a href="#" data-perform="panel-collapse">
+                                                        <i class="ti-plus"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-wrapper collapse">
+                                                <div class="panel-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                                                    <a class="btn btn-info m-t-10">Demo button</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <section id="section-linemove-2">
+                                        <div class="panel panel-danger">
+                                            <div class="panel-heading text-left">Panel with action
+                                                <div class="panel-action">
+                                                    <a href="#" data-perform="panel-collapse">
+                                                        <i class="ti-minus"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="panel-wrapper collapse in">
+                                                <div class="panel-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                                                    <a class="btn btn-info m-t-10">Demo button</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <section id="section-linemove-3">
+                                        <h2>Tabbing 3</h2>
+                                    </section>
+                                    <section id="section-linemove-4">
+                                        <h2>Tabbing 4</h2>
+                                    </section>
+                                    <section id="section-linemove-5">
+                                        <h2>Tabbing 5</h2>
+                                    </section>
+                                </div>
+                                <!-- /content -->
                             </div>
+                            <!-- /tabs -->
+
                         </div>
                     </div>
                 </div>
@@ -242,7 +423,7 @@
             <!-- /.container-fluid -->
             <!-- Modals here -->
             <div class="modal fade" id="modal-add-partylist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -253,18 +434,12 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="txt-add-position" class="control-label">Name:</label>
-                                    <input type="text" class="form-control" name="txt-add-position" placeholder="e.g. E-VoS">
+                                    <label for="txt-add-partylist-name" class="control-label">Name:</label>
+                                    <input type="text" class="form-control" name="txt-add-partylist-name" placeholder="e.g. Mongoloids Party">
                                 </div>
                                 <div class="form-group">
                                     <label for="ddl-add-schoolyear" class="control-label">School Year:</label>
-                                    <select class="form-control" name="ddl-add-schoolyear">
-                                        <option>2021-2022</option>
-                                        <option>2020-2021</option>
-                                        <option>2019-2020</option>
-                                        <option>2018-2019</option>
-                                        <option>2017-2018</option>
-                                    </select>
+                                    <textarea name="" id="" cols="30" rows="10" class="summernote"></textarea>
                                 </div>
                             </form>
                         </div>
@@ -304,10 +479,39 @@
         <!-- Custom Theme JavaScript -->
         <script src="assets/js/custom.min.js"></script>
         <script src="assets/js/dashboard1.js"></script>
+        <!-- Magnific popup JavaScript -->
+        <script src="plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+        <script src="plugins/bower_components/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+        <script src="plugins/bower_components/summernote/dist/summernote.min.js"></script>
+        <script>
+            jQuery(document).ready(function() {
+                $('.summernote').summernote({
+                    height: 350, // set editor height
+                    minHeight: null, // set minimum height of editor
+                    maxHeight: null, // set maximum height of editor
+                    focus: false // set focus to editable area after initializing summernote
+                });
+                $('.inline-editor').summernote({
+                    airMode: true
+                });
+            });
+            window.edit = function() {
+                $(".click2edit").summernote()
+            }, window.save = function() {
+                $(".click2edit").destroy()
+            }
+        </script>
+
         <script src="plugins/bower_components/datatables/jquery.dataTables.min.js"></script>
         <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-        <!--Style Switcher -->
-        <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+        <script src="assets/js/cbpFWTabs.js"></script>
+        <script>
+            (function() {
+                [].slice.call(document.querySelectorAll('.sttabs')).forEach(function(el) {
+                    new CBPFWTabs(el);
+                });
+            })();
+        </script>
         <script>
             $(document).ready(function() {
                 $('#myTable').DataTable();
