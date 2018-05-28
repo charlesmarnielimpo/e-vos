@@ -9,14 +9,7 @@ class Academic_calendar_model extends CI_Model {
 
 	public function create($data)
 	{
-		$count = $this->db->insert('academic_calendar', $data);
-		if($count>0)
-		{
-			return true;
-		}else{
-			return false;
-		}
-
+		$this->db->insert('academic_calendar', $data);
 	}
 
 	public function read()
@@ -30,5 +23,15 @@ class Academic_calendar_model extends CI_Model {
 		}else{
 			return $query->result();
 		}
+	}
+
+	public function update($id,$data){
+		$this->db->where('id', $id);
+		$this->db->update('academic_calendar', $data);
+	}
+
+	public function delete($id){
+		$this->db->where('id', $id);
+		$this->db->delete('academic_calendar');
 	}
 }
